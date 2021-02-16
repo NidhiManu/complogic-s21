@@ -42,5 +42,8 @@ just explained. Write your definition in
 a separate file, option_test.lean.
 -/
 
+def b2n : bool → option nat
+| tt := option.some 1
+| _ := option.none
 
 end hidden

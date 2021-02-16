@@ -51,6 +51,9 @@ inductive list (α : Type u) : Type u
 -/
 
 #print list 
+#reduce list.cons 1
+#reduce list.cons 1 (list.nil)
+#reduce list.cons 5 (list.cons 1 (list.nil))
 
 end hidden
 

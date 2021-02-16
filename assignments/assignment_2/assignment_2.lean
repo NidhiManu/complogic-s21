@@ -34,6 +34,18 @@ by a smaller ST expression (similarly).
 
 -- YOUR DATA TYPE DEFINITION HERE
 
+inductive SalmonTrout : Type
+| empty
+| salmon (s' : SalmonTrout)
+| trout (s' : SalmonTrout)
+
+open SalmonTrout
+
+-- #check SalmonTrout."salmon"
+#check SalmonTrout.empty
+#reduce salmon (salmon (trout (trout empty)))
+
+
 /-
 Now assume that the *meaning* of a 
 given ST expression, e, is a  pair,
@@ -61,6 +73,13 @@ be recursive.
 -/
 
 -- YOUR EVAL AND HELPER FUNCIONS HERE
+def fishEvalHelper : SalmonTrout → prod nat nat → prod nat nat
+| SalmonTrout.empty (prod.mk a b) := prod.mk a b
+| (salmon (s' : SalmonTrout)) (prod.mk a b) := fishEvalHelper s' (prod.mk (nat.succ a) b)
+| (trout (s' : SalmonTrout)) (prod.mk a b) := fishEvalHelper s' (prod.mk a (nat.succ b))
+
+def fishEval (e : SalmonTrout) : (prod nat nat) :=
+fishEvalHelper e (prod.mk 0 0)
 
 /-
  WRITE SOME TEST CASES
@@ -71,6 +90,9 @@ be recursive.
     an expression with three salmon
     and two trout.
 -/
+
+#reduce fishEval SalmonTrout.empty
+#reduce fishEval (salmon (trout (salmon (salmon (trout SalmonTrout.empty)))))
 
 /-
 2. [25 points] polymorphic functions 
@@ -90,6 +112,9 @@ with the name, id.
 
 -- YOUR ANSWER HERE
 
+universe u
+
+def id' {α : Type u} (a: α) := a
 
 /-
 When you've succeded, the following
@@ -148,6 +173,9 @@ represent this partial function.
 -/
 
 -- YOUR ANSWER HERE
+def pId_bool : bool → option bool
+| tt := some tt
+| ff := none
 
 /-
 TEST YOUR FUNCTION
@@ -157,7 +185,8 @@ argument values.
 -/
 
 -- HERE
-
+#eval pId_bool tt
+#eval pId_bool ff
 
 /- 
 4. [25 points] Higher-order functions 
@@ -181,6 +210,10 @@ structure box (α : Type u) : Type u :=
 (val : α)
 
 -- YOUR FUNCTION HERE
+def liftF2Box {α β : Type u} : (α → β) → (box α → box β) :=
+λ (f : α → β),
+    λ (a : box α),
+        box.mk (f a.val)
 
 -- WHEN YOU'VE GOT IT, THIS TEST SHOULD PASS
 

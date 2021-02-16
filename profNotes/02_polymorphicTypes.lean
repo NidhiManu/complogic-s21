@@ -112,7 +112,7 @@ at all! But there is no magic.
 
 EXERCISE: Explain why.
 -/
-
+-- In logic, false implies anything.
 /-
 Exercise: Can you maybe just create a 
 function of type, say, ℕ to empty, and
@@ -122,7 +122,7 @@ can then use to do magic?
 EXERCISE: Explain where you get stuck
 if you try.
 -/
-
+-- Can't return empty  because there's now way to construct such an object
 -- [End of new stuff]
 
 /-
@@ -415,6 +415,7 @@ structure prod (α β : Type) : Type :=
 (snd : β)
 
 -- Self-test: What's the type of prod?
+-- Type → Type → Type
 
 -- "Introduce" some pairs
 def pair1 := prod.mk 4 "Hi"

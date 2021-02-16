@@ -22,4 +22,8 @@ is not tt, the function returns an error
 string, "Oops, argument not true."
 -/
 
+def t2z : bool → sum nat string
+| bool.tt := sum.inl 0
+| _ := sum.inr "Oops, argument not true."
+
 end hidden

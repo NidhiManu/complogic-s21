@@ -54,5 +54,33 @@ for functions you're not sure
 about.
 -/
 
+def bor : bool → bool → bool
+| bool.ff bool.ff := bool.ff
+| _ _ := bool.tt
+
+def bnand : bool → bool → bool :=
+λ a,
+  λ b,
+    bnot (band a b)
+
+def bnor : bool → bool → bool :=
+λ a,
+  λ b,
+    bnot (bor a b)
+
+def bxor : bool → bool → bool :=
+λ a,
+  λ b,
+    band (bnand a b) (bor a b)
+
+def bimp : bool → bool → bool :=
+λ a,
+  λ b,
+    bor a (bnot b)
+
+def biff : bool → bool → bool :=
+λ a,
+  λ b,
+    bnot (bxor a b)
 
 end hidden

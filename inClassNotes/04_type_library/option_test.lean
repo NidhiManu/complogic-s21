@@ -187,9 +187,24 @@ your add function if/as necessary
 to carry out addition.
 -/
 
+def mult : ℕ → ℕ → ℕ 
+| 0 m := 0
+| (n' + 1) m := add m (mult n' m)
+
+#eval mult 8 12
+#eval mult 16 0
+
 /-
 EXERCISE: write a mathematical
 definition of exponentiation and
 implement it, using your definition
 of multiplication if/as necessary.
 -/
+
+def exp : ℕ → ℕ → ℕ
+| m 0 := 1
+| m (n' + 1) := mult m (exp m n')
+
+#eval exp 0 0
+#eval exp 2 10
+#eval exp 3 4
