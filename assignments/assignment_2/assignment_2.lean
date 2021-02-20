@@ -43,7 +43,7 @@ open SalmonTrout
 
 -- #check SalmonTrout."salmon"
 #check SalmonTrout.empty
-#reduce salmon (salmon (trout (trout empty)))
+#reduce salmon (salmon (trout (trout SalmonTrout.empty)))
 
 
 /-
