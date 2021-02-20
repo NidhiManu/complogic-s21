@@ -20,9 +20,11 @@ inductive bool : Type
 /-
 Note: The identifiers ff and tt 
 without qualification will refer
-to Lean's definitions of these
-terms. Use bool.ff and bool.tt
-throughout this file. Sorry.
+to Lean's built-in definitions 
+of these terms. Use bool.ff and 
+bool.tt throughout this file, to
+be sure you're picking up *our*
+definition of bool, not Lean's.
 -/
 
 def bnot : bool → bool
@@ -37,21 +39,14 @@ def band : bool → bool → bool
 EXERCISE: Implement the following
 binary boolean operators. Use the
 following names for the functions
-with the give descriptions.
-
+with the give descriptions. 
+ 
 bor   -- or / disjunction
 bxor  -- exclusive or
 bimp  -- implies
 biff  -- iff / equivalent
 bnand -- not and
 bnor  -- not or
-
-Use the band, bor, and bnot 
-functions to implement your
-bnand and bnor functions. You
-can look up the truth tables
-for functions you're not sure
-about.
 -/
 
 def bor : bool → bool → bool

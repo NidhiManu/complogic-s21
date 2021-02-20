@@ -17,37 +17,37 @@
 **Schedule.** Roughly speaking we will cover material drawn from about one chapter each week. Here are the section and chapter assignments by date, along with dates reserved for reviews and exams.
 
 
-Date   | Topic  |  Assignments |
------- | ------ | ------------ |
-Warmup | History, purpose, and nature of logic  | Watch https://www.youtube.com/watch?v=wOQuW6QFdos&feature=youtu.be
-Feb 2  | Formal Languages                       | 
-Feb 4  | Types and Functions                    | Homework #1 Development Environment Set-up
-Feb 9  | Polymorphic Type Builders              |
-Feb 11 | Type Universes                         | Homework #2 + Reading assignment
-Feb 16 | Higher-Order Functions                 | 
-Feb 18 | Algebraic Structures, Typeclasses      |
-Feb 23 | Propositions and Proofs                |
-Feb 25 |
-Mar 1  | |                          |
-Mar 3  |                            |
-Mar 8  |                          | 
-Mar 10 |
-Mar 15 |                          | 
-Mar 17 |                          |
-Mar 22 | REVIEW                   |
-Mar 24 | EXAM                     | 
-Mar 29 |                            | 
-Mar 31 |                          
-Apr 1  |                          | 
-Apr 6  |
-Apr 8  |                          | 
-Apr 13 |
-Apr 15 |                          | 
-Apr 20 |
-Apr 22 |                          | 
-Apr 27 |
-Apr 29 |                          | 
-May 4  |
-May 6  | REVIEW                   | 
-May 15 | EXAM 9AM-12PM or Takehome TBD
+Date   | Topic  |  Assignments                                  |
+------ | ------ | ------------                                  |
+Warmup | What is logic?                                         | Watch https://www.youtube.com/watch?v=wOQuW6QFdos&feature=youtu.be
+Feb 2  | Formal Languages                                       | 
+Feb 4  | Types and Functions                                    | HW #1 IDE Set-up
+Feb 9  | Polymorphic Type Builders                              |
+Feb 11 | Polymorphic Types and Type Universes                   | HW #1 Due, HW #2 Out (Polymorphic Types, Universes, Functions) 
+Feb 16 | Sum of Product Types (option, sum, nat, list)          | HW #3 Out (Inductive Types, Higher-Order Functions)
+Feb 18 | Higher-Order Functions (filter, map, fold)             | HW #2 Due
+Feb 23 | Algebraic Structures, Typeclasses (functor, monoid)    | HW #3 Due, HW #4 Out (Algebraic Structures)
+Feb 25 | Algebraic Structures, Typeclasses (applicative, monad) |
+Mar 1  | Logic and Computation: Propositions as Types           | HW# #4 Due, HW #5 Out (Propositions and Proofs)
+Mar 3  | Dependent Types (Π and Σ Types in full generality)     |
+Mar 8  | Inductive Families (Eq, Other Relations)               | HW #5 Due, HW #6 Out (Logic and Computation: Proofs I)
+Mar 10 | Predicate Logic and Proofs I                           |
+Mar 15 | Predicate Logic and Proofs II                          | HW #6 Out, HW #7 Out (Logic and Computation: Proofs II)  
+Mar 17 | Predicate Logic and Proofs III                         |
+Mar 22 | REVIEW                                                 | HW #7 Due, Take-home EXAM out
+Mar 24 | Introduction to imperative languages                   | Take-home EXAM DUE
+Mar 29 |                                                        | 
+Mar 31 |                                                        |
+Apr 1  |                                                        | 
+Apr 6  |                                                        |
+Apr 8  |                                                        | 
+Apr 13 |                                                        |
+Apr 15 |                                                        | 
+Apr 20 | Type systems  (Tentative)                              |
+Apr 22 |                                                        | 
+Apr 27 |                                                        |
+Apr 29 |                                                        | 
+May 4  |                                                        |
+May 6  |  Lean 4                                                | 
+May 15 | EXAM 9AM-12PM or Takehome TBD                          |
 

@@ -17,4 +17,5 @@ universe u
 structure box (α : Type u) : Type u :=
 (val : α)
 
+
 end hidden
